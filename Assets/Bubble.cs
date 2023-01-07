@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
-    public float timeToPop = 1f;
+    public float timeToPop = 0.2f;
 
     [SerializeField]
     private bool popped = false;
