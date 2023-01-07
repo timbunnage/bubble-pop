@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeathEffect : MonoBehaviour
+public class Flower : MonoBehaviour
 {
     public float deathTime = 20f;
     public float deathProgress= 0f;
