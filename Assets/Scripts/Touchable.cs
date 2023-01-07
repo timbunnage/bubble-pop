@@ -16,7 +16,8 @@ public abstract class Touchable : MonoBehaviour
         
     }
 
-    protected virtual void onTouched() {
+    protected virtual void onTouched()
+    {
 
     }
 }

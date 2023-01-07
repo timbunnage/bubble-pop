@@ -35,7 +35,8 @@ public class DeathEffect : MonoBehaviour
             Transform t = transform;
             t.localScale = new Vector3(t.localScale.x + 0.05f, t.localScale.y + 0.05f, t.localScale.z);
             deathProgress += 1;
-        } else
+        }
+        else
         {
             Destroy(gameObject);
         }

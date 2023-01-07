@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Move the player around the screen
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        transform.position += move * moveSpeed * Time.deltaTime;
+        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+        transform.position += moveSpeed * Time.deltaTime * move;
     }
 }
