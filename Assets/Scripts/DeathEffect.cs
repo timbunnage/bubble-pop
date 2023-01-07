@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Flowe : MonoBehaviour
+public class DeathEffect : MonoBehaviour
 {
     public float deathTime = 20f;
     public float deathProgress= 0f;
@@ -30,7 +30,6 @@ public class Flowe : MonoBehaviour
 
     void onDeath()
     {
-
         if(deathTime > deathProgress)
         {
             Transform t = transform;
