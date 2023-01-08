@@ -34,7 +34,7 @@ public class StoryManager : MonoBehaviour
 
     public static void IncrementStory()
     {
-        print("NEW STORY");
+        print("Story progressed");
         StoryProgress++;
         
         // Speed bubble stuff here

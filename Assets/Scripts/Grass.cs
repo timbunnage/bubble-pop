@@ -25,7 +25,6 @@ public class Grass : Item
         if (collected)
         {
             StoryManager.GrassDestroyed++;
-            print(StoryManager.GrassDestroyed);
         }
     }
 }

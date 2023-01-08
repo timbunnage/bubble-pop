@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 848494951791209294, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d635db772e0102d468a4bc636b29728e, type: 3}
+      objectReference: {fileID: -1837856098, guid: d635db772e0102d468a4bc636b29728e, type: 3}
     - target: {fileID: 848494951791209294, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -99,4 +99,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CollectionSprites:
-  - {fileID: 21300000, guid: 0610274905b35ee408a44882e181eb3b, type: 3}
+  - {fileID: -1919203559, guid: 0610274905b35ee408a44882e181eb3b, type: 3}
