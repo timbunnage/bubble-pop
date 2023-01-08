@@ -20,6 +20,12 @@ public class Grass : Item
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        Collect();
+        bool collected = Collect();
+        
+        if (collected)
+        {
+            StoryManager.GrassDestroyed++;
+            print(StoryManager.GrassDestroyed);
+        }
     }
 }

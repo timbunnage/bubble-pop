@@ -4940,5 +4940,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15407b9696c61d3448c8ddf1a02e17d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uncollectedSprite: {fileID: 0}
-  collectedSprite: {fileID: 0}
+  sprites: []
+  storyManagerObject: {fileID: 8640509201309063406, guid: 0448071847fc3f14db08242d24aad2a6, type: 3}

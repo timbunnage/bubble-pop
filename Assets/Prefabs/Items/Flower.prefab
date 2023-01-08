@@ -66,11 +66,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3543484491282363508, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3543484491282363508, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8895428552543708121, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
@@ -98,5 +98,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7bb1aa69e6bba428d69caff3847aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectedSprite: {fileID: 1529562482, guid: 6402dc269e784d44cb5f04ae77ed831f, type: 3}
-  dialogue: []
+  CollectionSprites:
+  - {fileID: 21300000, guid: 0610274905b35ee408a44882e181eb3b, type: 3}

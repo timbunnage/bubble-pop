@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 848494951791209295, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 848494951791209295, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90,4 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbe79a6cdb31bd0499dfa710395e143c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectedSprite: {fileID: 1529562482, guid: 6402dc269e784d44cb5f04ae77ed831f, type: 3}
+  CollectionSprites:
+  - {fileID: 1529562482, guid: 6402dc269e784d44cb5f04ae77ed831f, type: 3}
+  - {fileID: 1784911370, guid: 6402dc269e784d44cb5f04ae77ed831f, type: 3}

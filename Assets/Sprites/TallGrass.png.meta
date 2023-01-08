@@ -160,6 +160,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TallGrass_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1c28b6759534084d9bdbf178ef0991d
+      internalID: 1784911370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -171,6 +192,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      TallGrass_2: 1784911370
       TallGrass_0: -1121263224
       TallGrass_1: 1529562482
   mipmapLimitGroupName: 

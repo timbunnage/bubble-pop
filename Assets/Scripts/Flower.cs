@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Flower : Item
 {
-    public string[] dialogue;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +17,16 @@ public class Flower : Item
         
     }
 
-    public override void Collect()
+    public override bool Collect()
     {
-        if (!Collected)
-        {
-            // speech bubble tech here
-        }
+        bool collected = base.Collect();
         
-        base.Collect();
+        if (collected)
+        {
+            StoryManager.IncrementStory();
+            return true;
+        }
+
+        return false;
     }
 }
