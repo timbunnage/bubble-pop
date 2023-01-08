@@ -5,10 +5,9 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public Sprite uncollectedSprite;
     public Sprite collectedSprite;
     
-    private bool _collected = false;
+    protected bool Collected = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,17 +23,13 @@ public class Item : MonoBehaviour
 
     public virtual void Collect()
     {
-        if (_collected)
+        print("TEST");
+        if (!Collected)
         {
-            return;
-        }
-        else
-        {
-            _collected = true;
-
-            GetComponent<SpriteRenderer>().sprite = collectedSprite;
+            gameObject.GetComponent<SpriteRenderer>().sprite = collectedSprite;
+            gameObject.GetComponent<ParticleSystem>().Play();
             
-            // particle animation here
+            Collected = true;
         }
     }
 }

@@ -21,8 +21,11 @@ public class Flower : Item
 
     public override void Collect()
     {
-        base.Collect();
+        if (!Collected)
+        {
+            // speech bubble tech here
+        }
         
-        // speech bubble tech here
+        base.Collect();
     }
 }

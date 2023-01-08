@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
@@ -10,40 +12,62 @@ public class Player : MonoBehaviour
     public Sprite backSprite;
     public Sprite leftSprite;
 
+    private SpriteRenderer _spriteRenderer;
+    private Collider2D _collider;
+    
+    private Vector2 _movementVector;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _collider = gameObject.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Move the player around the screen
-        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0f).normalized;
-        transform.position += moveSpeed * Time.deltaTime * move;
+        transform.position += moveSpeed * Time.deltaTime * new Vector3(_movementVector.x, _movementVector.y, 0);
+    }
 
-        float angle = Vector2.SignedAngle(new Vector2(move.x, move.y), Vector2.up);
-        print(angle);
+    private void OnMove(InputValue inputValue)
+    {
+        _movementVector = inputValue.Get<Vector2>().normalized;
 
-        if (move.normalized.magnitude > 0)
+        if (_movementVector.magnitude > 0)
         {
-            if (angle > -45 && angle < 45)
+            // Get movement direction
+            float angle = Vector2.SignedAngle(_movementVector, Vector2.up);
+        
+            // Change sprites based on movement direction
+            if (angle > -45 && angle < 45) // N
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = forwardSprite;
+                _spriteRenderer.sprite = forwardSprite;
             }
-            else if (angle >= 45 && angle <= 135)
+            else if (angle >= 45 && angle <= 135) // E
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = rightSprite;
+                _spriteRenderer.sprite = rightSprite;
             }
-            else if (angle > 135 || angle < -135)
+            else if (angle > 135 || angle < -135) // S
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = backSprite;
+                _spriteRenderer.sprite = backSprite;
             }
-            else if (angle >= -135 && angle <= -45)
+            else if (angle >= -135 && angle <= -45) // W
             {
-                gameObject.GetComponent<SpriteRenderer>().sprite = leftSprite;
+                _spriteRenderer.sprite = leftSprite;
             }
+        }
+    }
+
+    private void OnInteract(InputValue inputValue)
+    {
+        var filter = new ContactFilter2D().NoFilter();
+        var colliderList = new List<Collider2D>();
+        _collider.OverlapCollider(filter, colliderList);
+
+        foreach (Collider2D overlappingCollider in colliderList)
+        {
+            overlappingCollider.gameObject.GetComponent<Item>().Collect();
         }
     }
 }
