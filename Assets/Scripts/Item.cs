@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    private bool _collected = false;
-
     public Sprite uncollectedSprite;
     public Sprite collectedSprite;
+    
+    private bool _collected = false;
 
     // Start is called before the first frame update
     void Start()
@@ -21,8 +21,8 @@ public class Item : MonoBehaviour
     {
         
     }
-    
-    void OnTriggerEnter2D(Collider2D other)
+
+    public virtual void Collect()
     {
         if (_collected)
         {
