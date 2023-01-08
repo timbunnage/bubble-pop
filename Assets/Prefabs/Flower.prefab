@@ -143,6 +143,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7bb1aa69e6bba428d69caff3847aa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uncollectedSprite: {fileID: 0}
-  collectedSprite: {fileID: 0}
+  uncollectedSprite: {fileID: 21300000, guid: 443d05f2a4ae81a4297ac8ec762644c3, type: 3}
+  collectedSprite: {fileID: 21300000, guid: a9354548f1d8e4015830a88081482039, type: 3}
   dialogue: []

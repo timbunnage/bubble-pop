@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Grass : Item
 {
+
+    ParticleSystem GrassParticles;
     // Start is called before the first frame update
     void Start()
     {
-        
+    GrassParticles = GetComponent<ParticleSystem>();
     }
 
     // Update is called once per frame
@@ -20,5 +22,6 @@ public class Grass : Item
     void OnTriggerEnter2D(Collider2D other)
     {
         Collect();
+        GrassParticles.Play();
     }
 }
