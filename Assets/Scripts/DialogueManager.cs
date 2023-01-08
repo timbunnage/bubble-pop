@@ -6,100 +6,85 @@ using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
-    List<string> dialogue;
-    int currentDialogueIndex;
-
-    public GameObject dialogueTextObject;
-    public GameObject anyKeyTextObject;
-    private TMP_Text myText;
-    private TMP_Text anyKeyText;
-
+    public GameObject canvasObject;
     public bool active;
 
-    float letterTimer;
+    public float characterDelay = 0.2f; // Time it takes for a character to appear in seconds
+    public float lineDelay = 5f; // Time it takes for line to auto progress
+    
+    private TMP_Text _textObject;
+    
+    private List<string> _dialogueList;
+    private int _dialogueProgress;
+
+    private float _letterTimer;
+    private float _lineTimer;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        myText = dialogueTextObject.GetComponent<TMP_Text>();
-        Debug.Log(myText.text);
-
-        anyKeyText = anyKeyTextObject.GetComponent<TMP_Text>();
-        
-        // gameObject.SetActive(false);
-        SetDialogueActive(false);
-
-        active = false;
-
-  
-        letterTimer = 0f;
-
-        dialogue = new List<string>();
-        currentDialogueIndex = 0;
+        _textObject = canvasObject.GetComponent<TMP_Text>();
+        canvasObject.SetActive(false);
     }
-
-    void SetDialogueActive(bool isActive) {
-        dialogueTextObject.SetActive(isActive);
-        anyKeyTextObject.SetActive(isActive);
-    }
-
-    public void setDialogue(List<string> Idialogue) {
-        currentDialogueIndex = 0;
-
-        dialogue = Idialogue;
-
-        active = true;
-        // gameObject.SetActive(true);
-        SetDialogueActive(true);
-
-        letterTimer = 0f;
-
-        myText.text = "";
-    }
-
-    float lastDeltaTime = 0;
-
+    
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (Time.deltaTime > 0) {
-            lastDeltaTime = Time.deltaTime;
+        if (!active) return;
+
+        if (_dialogueList[_dialogueProgress].Length == 0)
+        {
+            _lineTimer -= Time.deltaTime;
+            
+            if (_lineTimer > 0) return;
+            
+            ProgressDialogue();
         }
+        
+        _letterTimer -= Time.deltaTime;
 
-        if (active) {
-            float timeChange = lastDeltaTime;
-            letterTimer = letterTimer - timeChange;
-            if (dialogue[currentDialogueIndex].Length > 0) {
-                if (letterTimer <= 0) {
-                    letterTimer = letterTimer + 0.02f;
-                    myText.text = myText.text + dialogue[currentDialogueIndex][0];
-                    dialogue[currentDialogueIndex] = dialogue[currentDialogueIndex].Substring(1);
-                }
+        if (_letterTimer > 0) return;
+        
+        _textObject.text += _dialogueList[_dialogueProgress][0]; // Add one character
+        _dialogueList[_dialogueProgress] = _dialogueList[_dialogueProgress][1..];
+                
+        _letterTimer += characterDelay;
+    }
 
-                if (Input.inputString.Length > 0 || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) {
-                // if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) {
-                // if (Input.anyKeyDown) {
-                    myText.text = myText.text + dialogue[currentDialogueIndex];
-                    dialogue[currentDialogueIndex] = "";
-                }
-
-                anyKeyText.text = "";
-            } else {
-                anyKeyText.text = "Press any key...";
-                if (Input.inputString.Length > 0 || Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) {
-                // if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)) {
-                // if (Input.anyKeyDown) {
-                    if (currentDialogueIndex < dialogue.Count - 1) {
-                        letterTimer = 0;
-                        currentDialogueIndex = currentDialogueIndex + 1;
-                    } else {
-                        active = false;
-                        // gameObject.SetActive(false);
-                        SetDialogueActive(false);
-                    }
-                    myText.text = "";
-                }
-            }
+    public void ProgressDialogue()
+    {
+        if (!active) return;
+        
+        // Add rest of line
+        if (_dialogueList[_dialogueProgress].Length > 0)
+        {
+            _textObject.text += _dialogueList[_dialogueProgress];
+            _dialogueList[_dialogueProgress] = "";
+            return;
         }
+        
+        // Progress to next line
+        if (_dialogueProgress < _dialogueList.Count - 1) {
+            _letterTimer = 0;
+            _dialogueProgress++;
+        } else {
+            active = false;
+            canvasObject.SetActive(false);
+        }
+        _textObject.text = "";
+        
+        _lineTimer += lineDelay;
+    }
+    
+    public void CallDialogue(List<string> inputDialogue) {
+        _dialogueList = inputDialogue;
+        
+        _dialogueProgress = 0;
+        _letterTimer = characterDelay;
+        _lineTimer = lineDelay;
+        _textObject.text = "";
+        
+        active = true;
+        canvasObject.SetActive(true);
     }
 }

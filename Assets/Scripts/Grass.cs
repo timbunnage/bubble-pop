@@ -7,22 +7,20 @@ public class Grass : Item
 {
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         
     }
-    
-    void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        bool collected = Collect();
-        
-        if (collected)
+        if (Collect())
         {
             StoryManager.GrassDestroyed++;
         }
