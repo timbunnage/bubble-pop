@@ -13,6 +13,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4042890987983671409, guid: bef4696e2afca5d448925a7ce4dbfc4b, type: 3}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[1]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[3]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: collectionAudio.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 39312227081ec1d4db90b3e1b2b85a26, type: 3}

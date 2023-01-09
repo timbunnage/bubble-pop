@@ -13,16 +13,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4042890987983671409, guid: b6948394d5e55da4598fbad585acc9e9, type: 3}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: recipeInput.Array.data[1]
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: recipeInput.Array.data[3]
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[4]
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: recipeInput.Array.data[5]
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: collectionAudio.Array.size

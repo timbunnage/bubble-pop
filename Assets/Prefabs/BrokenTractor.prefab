@@ -13,6 +13,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4042890987983671409, guid: 8e62ef3a274b3f648a43a83c1f24b86a, type: 3}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[3]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: recipeInput.Array.data[5]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: collectionAudio.Array.size
       value: 1
       objectReference: {fileID: 0}
