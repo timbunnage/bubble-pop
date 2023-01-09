@@ -6,7 +6,7 @@ using System.Linq;
 
 public class Broken : Item
 {
-    public int[] recipeInput = {0, 0, 0, 0, 0, 0, 0, 0};
+    public int[] recipeInput = {0, 0, 0, 0, 0, 0, 0};
 
     public Obstacle linkedObstacle;
     
@@ -17,11 +17,6 @@ public class Broken : Item
         "Oh, what's this?",
         "It seems to be broken.",
         "I gotta fix it!"
-    };
-
-    public string[] repeatDialogueList =
-    {
-        "I gotta fix this thing somehow!"
     };
 
     public string[] collectedDialogueList =
@@ -86,7 +81,39 @@ public class Broken : Item
             return false;
         }
 
-        DialogueManager.CallDialogue(repeatDialogueList.ToList());
+        var recipePrompt = "I need";
+        for (var i = 0; i < recipeInput.Length; i++)
+        {
+            if (recipeInput[i] == 0) continue;
+
+            switch (i)
+            {
+                case 0:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Iris] - recipeInput[i]) + " Iris";
+                    break;
+                case 1:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.IrisMetal] - recipeInput[i]) + " Aluminium";
+                    break;
+                case 2:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Tulip] - recipeInput[i]) + " Tulip";
+                    break;
+                case 3:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.TulipMetal] - recipeInput[i]) + " Copper";
+                    break;
+                case 4:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Violet] - recipeInput[i]) + " Violet";
+                    break;
+                case 5:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.VioletMetal] - recipeInput[i]) + " Steel";
+                    break;
+                case 6:
+                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.TentKey] - recipeInput[i]) + " tent key";
+                    break;
+            }
+        }
+
+        string[] recipeDialogue = {recipePrompt};
+        DialogueManager.CallDialogue(recipeDialogue.ToList());
         return false;
     }
 }

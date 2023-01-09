@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -28,9 +29,9 @@ public class Player : MonoBehaviour
     {
         _dialogueManager = FindObjectOfType<DialogueManager>();
         
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        _collider = gameObject.GetComponent<Collider2D>();
-        _rigidbody = gameObject.GetComponent<Rigidbody2D>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _collider = GetComponent<Collider2D>();
+        _rigidbody = GetComponent<Rigidbody2D>();
         
         Cursor.visible = false;
     }
@@ -51,16 +52,7 @@ public class Player : MonoBehaviour
             moveSpeed * Time.fixedDeltaTime
         );
         
-        if (count > 0)
-        {
-            foreach (var hit in _castCollisions)
-            {
-                var obstacle = hit.collider.gameObject.GetComponent<Obstacle>();
-                if (obstacle == null) continue;
-                print(obstacle.Collectable);
-                if (!obstacle.Collectable) return;
-            }
-        }
+        if (count > 0 && _castCollisions.Any(hit => !hit.collider.isTrigger)) return;
         
         _rigidbody.MovePosition(_rigidbody.position + moveSpeed * Time.fixedDeltaTime * _movementVector);
     }

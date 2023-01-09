@@ -13,6 +13,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -3361174062814755937, guid: 7d0d1bd3795f7254182eac9330772511, type: 3}
+      propertyPath: collectionAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: d7112e2dbbd5c924abc34f2b036fc732, type: 3}
+    - target: {fileID: -3361174062814755937, guid: 7d0d1bd3795f7254182eac9330772511, type: 3}
       propertyPath: collectionSprites.Array.data[0]
       value: 
       objectReference: {fileID: -860289107, guid: c984a8698b59e294abfe0cd9bc666f86, type: 3}

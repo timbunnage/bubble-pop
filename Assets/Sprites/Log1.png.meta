@@ -133,8 +133,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0fcfe779c6793d438796f27c3132061
-      internalID: -86587114
+      spriteID: 18c5e056ab166964ab8c4bcbb1c10985
+      internalID: -1643651290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Log1_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898445f8a6986e144807a4ea78ae1c15
+      internalID: 1894410449
       vertices: []
       indices: 
       edges: []
@@ -150,7 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Log1_0: -86587114
+      Log1_1: 1894410449
+      Log1_0: -1643651290
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

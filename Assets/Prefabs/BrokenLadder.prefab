@@ -90,7 +90,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: alreadyCollectedDialogueList.Array.data[0]
-      value: I wonder what things I could climb with this thing...
+      value: I wonder what things I could climb with this...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
@@ -114,7 +122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_LocalPosition.x

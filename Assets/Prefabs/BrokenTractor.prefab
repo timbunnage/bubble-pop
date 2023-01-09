@@ -40,6 +40,46 @@ PrefabInstance:
       propertyPath: collectionAudio.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 0e222f199489bdc43899336da0f8df6f, type: 3}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: collectionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -990589126, guid: 2252e2d319388de46a43e10cb86bd416, type: 3}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: firstDialogueList.Array.data[0]
+      value: My dad's old tractor.
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: firstDialogueList.Array.data[1]
+      value: Looks like it's very out of shape
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: firstDialogueList.Array.data[2]
+      value: I should find some parts and fix it.
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: collectedDialogueList.Array.data[0]
+      value: Welcome back old pal
+      objectReference: {fileID: 0}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: alreadyCollectedDialogueList.Array.data[0]
+      value: Ready to push and shove!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Offset.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.x
       value: 0
@@ -74,34 +114,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}

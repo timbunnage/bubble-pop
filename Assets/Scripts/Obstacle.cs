@@ -6,18 +6,19 @@ using UnityEngine;
 
 public class Obstacle : Item
 {
-    [NonSerialized]
-    public bool Collectable;
+    public bool solid;
     
-    public string[] clearDialogueList =
-    {
-        "I can get through now!"
-    };
+    private bool _collectable;
+
+    private Collider2D _collider;
     
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
+
+        _collider = GetComponent<Collider2D>();
+        _collider.isTrigger = false;
     }
 
     // Update is called once per frame
@@ -28,17 +29,21 @@ public class Obstacle : Item
 
     public override bool Collect()
     {
-        if (!Collectable) return false;
-        
-        DialogueManager.CallDialogue(clearDialogueList.ToList());
-        
-        return base.Collect();
+        return _collectable && base.Collect();
     }
 
     public void Clear()
     {
-        gameObject.GetComponent<Collider2D>().isTrigger = true;
-        
-        Collectable = true;
+        _collectable = true;
+        if (!solid)
+        {
+            _collider.isTrigger = true;
+        }
+
+        if (solid)
+        {
+            StoryManager.Inventory[Flower.FlowerType.TentKey] = 1;
+        }
+        Collect();
     }
 }

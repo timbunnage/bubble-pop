@@ -28,9 +28,9 @@ public class Item : MonoBehaviour
     // Start is called before the first frame update
     protected virtual void Start()
     {
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        _audioSource = gameObject.GetComponent<AudioSource>();
-        _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _audioSource = GetComponent<AudioSource>();
+        _particleSystem = GetComponent<ParticleSystem>();
         
         StoryManager = FindObjectOfType<StoryManager>();
         DialogueManager = FindObjectOfType<DialogueManager>();

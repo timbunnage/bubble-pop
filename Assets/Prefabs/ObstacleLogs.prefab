@@ -8,40 +8,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1894410449, guid: 7a66855030ecc2e4eb38cdb0da947751, type: 3}
     - target: {fileID: 705383098849183843, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Name
       value: ObstacleLogs
       objectReference: {fileID: 0}
     - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
@@ -63,7 +39,7 @@ PrefabInstance:
     - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -86587114, guid: 7a66855030ecc2e4eb38cdb0da947751, type: 3}
+      objectReference: {fileID: -1643651290, guid: 7a66855030ecc2e4eb38cdb0da947751, type: 3}
     - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1

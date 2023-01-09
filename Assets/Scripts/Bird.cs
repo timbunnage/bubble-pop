@@ -26,7 +26,7 @@ public class Bird : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
         switch (travelDirection)
         {
             case TravelDirection.Left:

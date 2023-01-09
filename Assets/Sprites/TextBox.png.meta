@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -124,7 +124,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
+        width: 192
         height: 48
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -133,8 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed3eee28d3c8ae148a04201104b3a9fe
-      internalID: -429330453
+      spriteID: ff79aa41b818c5c468f596cdf2dde5b5
+      internalID: -93753431
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TextBox_0: -429330453
+      TextBox_0: -93753431
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
