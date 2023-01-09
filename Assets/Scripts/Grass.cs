@@ -5,14 +5,10 @@ using UnityEngine;
 
 public class Grass : Item
 {
-    private StoryManager _storyManager; 
-    
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        
-        _storyManager = FindObjectOfType<StoryManager>();
     }
 
     // Update is called once per frame
@@ -25,7 +21,7 @@ public class Grass : Item
     {
         if (Collect())
         {
-            _storyManager.IncrementGrass();
+            StoryManager.IncrementGrass();
         }
     }
 }

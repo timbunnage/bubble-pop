@@ -42,8 +42,204 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84c1793f8b841434ab89671bc2ee4752, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Name:
+  m_EditorClassIdentifier:
   storyProgress: 0
-  mainDialogue: []
-  playerObject: {fileID: 2265418834200518771, guid: bafd9e675f55ab747b725be73fb1b885, type: 3}
+  dialogueList:
+  - paragraphList:
+    - "There was a storm last night..."
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "When I was 5, I planted this garden with my father"
+  - paragraphList:
+    - "I don't remember much, but I do remember the smell of the dirt"
+    - "I remember the effort, the hours, and the sweating"
+  - paragraphList:
+    - "Most of all, I remember his patience and focus"
+    - "Despite the heat, he exuded a quiet comfort"
+    - "Something I could sense even as a kid"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "I remember being 11"
+  - paragraphList:
+    - "'The Corporation has decided to take matters into their own hands'"
+    - "I couldn't understand the man on the TV, so my father sat me down"
+    - "He said, 'some things are going to change'"
+    - "'I have to be going to work more often now.'"
+    - "'But more will change for your friends, and for most people'"
+    - "'We're lucky.'"
+    - "'Lend them a hand when you can.'"
+    - "He seemed sombre"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "When I was 13, I became popular at school"
+  - paragraphList:
+    - "My father was in the headlines for his botany work at The Corporation"
+  - paragraphList:
+    - "Of course, he'd told me all about it before the media broke the news"
+    - "He'd created a new plant"
+    - "Something that grew quick, that didn't need much tending to"
+  - paragraphList:
+    - "Something made of metal"
+  - paragraphList:
+    - "I wanted to learn everything about it"
+    - "I started borrowing botany textbooks from his study"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "The attention at school wasn't perfect"
+    - "Some of the other kids had fathers who had been assigned to the front by The Corporation"
+    - "Some of the other kids realised how lucky I was"
+  - paragraphList:
+    - "I started walking home down different paths"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "I was 14
+    - "The Corporation was in the news again"
+    - "Another scientific breakthrough"
+  - paragraphList:
+    - "They'd cross pollinated real flowers with the metal ones"
+    - "Creating new metal flower variants"
+    - "Roses became brass, and violets became stainless steel"
+  - paragraphList:
+    - "They played a video of a 'metal petal' farm during a bloom"
+    - "The scraping of all the petals opening sounded like..."
+    - "... Like a screeching chorus of dying cats"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "Later that year was the big one"
+    - "With genetic modifications, the flowers could grow objects in the buds"
+    - "and when they bloomed they could be picked straight out of the ovary"
+  - paragraphList:
+    - "Electrical wires made of copper"
+    - "Lightbulb filaments made of tungsten"
+    - "Bullet cores made of steel"
+  - paragraphList:
+    - "My father was spending more and more time in the garden..."
+    - "... retreating inside himself..."
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "At 17, I was ear against the door of my father's study"
+    - "He had said some important people would be here"
+  - paragraphList:
+    - "They wanted to overclock the metal petals in order to win the war"
+    - "It had been a stalemate for too long"
+    - "There was shouting... he was shouting..."
+    - "... Then, murmuring"
+  - paragraphList:
+    - "The important people left, and I peeked inside"
+    - "He was staring out the window, at the garden"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "The war officially ended a couple months after that"
+    - "Apparently, we'd overpowered them easily"
+    - "It was the day after my 18th birthday, and everyone was celebrating"
+    - "My father didn't join in though"
+    - "He had sectioned off a portion of the garden under a tent"
+    - "He was spending all his time in there, working on something"
+    - "I wasn't allowed in"
+    - "I think some important people came that day too"
+  - paragraphList:
+    - "That evening, after everyone went home..."
+    - "he told me something"
+  - paragraphList:
+    - "He said we needed to start preparing"
+    - "Something big was coming"
+    - "and he was working to try and stop it"
+    - "Something that would affect everyone"
+  - paragraphList:
+    - "He told me that the war only went the way it did because of his metal flower"
+    - "I remember thinking that was a good thing"
+  - paragraphList:
+    - "The following weeks, he was the most tense I'd ever seen him"
+    - "Rushing in and out of his garden tent from morning to evening..."
+    - "... then working late into the night, often till sunrise"
+    - "He was barely getting any sleep, and I wasn't seeing him much"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "It was one of those evenings he was out in the garden tent..."
+    - "...when the news broke publicly"
+  - paragraphList:
+    - "Someone had leaked information"
+    - "The metal petals had been growing unconstrained beyond their farms"
+    - "and they were spreading rapidly"
+    - "Just requiring dirt, they could grow anywhere and everywhere"
+    - "Eating up natural resources in the environment"
+    - "The Corporation stayed silent about the news"
+  - paragraphList:
+    - "My father was on a short phone call with someone, then hung up"
+    - "He invited me into the tent for the first time"
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList: []
+  - paragraphList:
+    - "He told me that the metal petals..."
+    - "... they were spreading much faster than the news was saying"
+    - "He had been experimenting on the flowers in our garden"
+    - "Trying to create a natural weapon to fight back against the spread"
+    - "But the best he'd been able to do so far was just delay the inevitable"
+    - "There wasn't going to be enough time find a real solution"
+    - "The metal petals had already started ravaging the ecosystem"
+    - "In turn causing mass famines"
+  - paragraphList:
+    - "We stocked up on the chemicals we needed and all the food we could"
+    - "He was exhausted"
+  - paragraphList:
+    - "As the metal petals spread across the country..."
+    - "... I became his lab assistant, struggling to try new methods..."
+    - "... new experiments..."
+    - "... doing what I could with what little I knew from him and his books"
+  - paragraphList:
+    - "My father became hyper focused"
+    - "I would wake up in the middle of the night and he'd still be out in the
+      tent"
+    - "Pushing himself to the brink of extreme fatigue"
+    - "Day and night... over and over..."
+    - "... and over..."
+    - "... and over..."
+  - paragraphList:
+    - "Until..."
+  irisCollected: 0
+  irisMetalCollected: 0
+  tulipCollected: 0
+  tulipMetalCollected: 0
+  violetCollected: 0
+  violetMetalCollected: 0
+  grassDestroyed: 0

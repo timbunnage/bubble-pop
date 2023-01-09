@@ -17,6 +17,9 @@ public class Item : MonoBehaviour
     private AudioSource _audioSource;
     private ParticleSystem _particleSystem;
 
+    protected StoryManager StoryManager;
+    protected DialogueManager DialogueManager;
+
     private Color[] _pixelColours;
     private ParticleSystem.EmitParams _emitParams;
 
@@ -28,6 +31,9 @@ public class Item : MonoBehaviour
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _audioSource = gameObject.GetComponent<AudioSource>();
         _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        
+        StoryManager = FindObjectOfType<StoryManager>();
+        DialogueManager = FindObjectOfType<DialogueManager>();
         
         _pixelColours = gameObject.GetComponent<SpriteRenderer>().sprite.texture.GetPixels(MipLevel);
     }

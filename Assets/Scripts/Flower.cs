@@ -18,14 +18,10 @@ public class Flower : Item
     }
     public FlowerType flowerType;
     
-    private StoryManager _storyManager; 
-    
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        
-        _storyManager = FindObjectOfType<StoryManager>();
     }
 
     // Update is called once per frame
@@ -38,7 +34,7 @@ public class Flower : Item
     {
         if (!base.Collect()) return false;
         
-        _storyManager.IncrementFlower(flowerType);
+        StoryManager.IncrementFlower(flowerType);
         
         return true;
     }

@@ -7,11 +7,13 @@ using UnityEngine;
 public class StoryManager : MonoBehaviour
 {
     public int storyProgress;
-    public string[] dialogueList =
+    
+    [Serializable]
+    public class ParagraphList
     {
-        "Why hello there.\nWhat are you doing here.\nYou know this place is dangerous, right?",
-        "Didn't I tell you to leave?\nYou are not welcome here.\nRun away, child."
-    };
+        public string[] paragraphList;
+    }
+    public ParagraphList[] dialogueList;
 
     public int irisCollected;
     public int irisMetalCollected ;
@@ -27,6 +29,8 @@ public class StoryManager : MonoBehaviour
     private void Start()
     {
         _dialogueManager = FindObjectOfType<DialogueManager>();
+        
+        print(dialogueList[0].ToString());
     }
 
     // Update is called once per frame
@@ -38,11 +42,12 @@ public class StoryManager : MonoBehaviour
     private void IncrementStory()
     {
         print("Story progressed");
-        
-        var currentDialogue = dialogueList[storyProgress].Split("\n").ToList();
 
         // begin current dialogue
-        _dialogueManager.CallDialogue(currentDialogue);
+        if (dialogueList[storyProgress].paragraphList.Length > 0)
+        {
+            _dialogueManager.CallDialogue(dialogueList[storyProgress].paragraphList.ToList());
+        }
         
         storyProgress++;
     }
