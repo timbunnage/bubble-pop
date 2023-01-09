@@ -13,31 +13,48 @@ public class Item : MonoBehaviour
     private int _collectionStage;
     private bool _collected;
 
-    protected Color[] pixels;
-    protected ParticleSystem ps;
-    ParticleSystem.Particle[] particles;
+    private SpriteRenderer _spriteRenderer;
+    private AudioSource _audioSource;
+    private ParticleSystem _particleSystem;
+
+    private Color[] _pixelColours;
+    private ParticleSystem.EmitParams _emitParams;
+
+    private const int MipLevel = 0;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
-  
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        _audioSource = gameObject.GetComponent<AudioSource>();
+        _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        
+        _pixelColours = gameObject.GetComponent<SpriteRenderer>().sprite.texture.GetPixels(MipLevel);
     }
 
     // Update is called once per frame
-    private void Update()
+    protected virtual void Update()
     {   
 
     }
-
 
     public virtual bool Collect()
     {
         if (_collectionStage >= collectionSprites.Length || _collected) return false;
 
-        gameObject.GetComponent<SpriteRenderer>().sprite = collectionSprites[_collectionStage];
-        gameObject.GetComponent<ParticleSystem>().Play();
-        gameObject.GetComponent<AudioSource>().clip = collectionAudio[Random.Range(0, collectionAudio.Length - 1)];
-        gameObject.GetComponent<AudioSource>().Play();
+        // Swap sprite
+        _spriteRenderer.sprite = collectionSprites[_collectionStage];
+        
+        // Play particles
+        foreach (var colour in _pixelColours)
+        {
+            _emitParams.startColor = colour;
+            _particleSystem.Emit(_emitParams, 1);
+        }
+        
+        // Play audio
+        _audioSource.clip = collectionAudio[Random.Range(0, collectionAudio.Length - 1)];
+        _audioSource.Play();
             
         _collectionStage++;
 
@@ -45,34 +62,5 @@ public class Item : MonoBehaviour
         
         _collected = true;
         return true;
-    }
-
-
-    protected void initParticleColors() {
-        // Get pixel colours
-        // https://answers.unity.com/questions/1331022/55-particle-startcolor-warning.html
-        ps = gameObject.GetComponent<ParticleSystem>();
-        // psmain = ps.main;
-        Texture2D t = gameObject.GetComponent<SpriteRenderer>().sprite.texture;
-        int mipLevel = 0;
-        pixels = t.GetPixels(mipLevel);
-
-        particles = new ParticleSystem.Particle[ps.main.maxParticles];
-
-    }
-
-    // Sets the particle color to a random pixel from the sprite texture
-    protected void setParticleColors() {
-        // psmain.startColor = pixels[Random.Range(0, pixels.Length-1)];
-
-        int numParticlesAlive = ps.GetParticles(particles);     // store in particles buffer
-        for (int i = 0; i < numParticlesAlive; i++)
-        {  
-            if (particles[i].GetCurrentColor(ps) == Color.white) { 
-                particles[i].color = pixels[Random.Range(0, pixels.Length-1)];
-            }
-            
-        }
-        ps.SetParticles(particles, numParticlesAlive);
     }
 }

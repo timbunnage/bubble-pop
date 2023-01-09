@@ -21,15 +21,17 @@ public class Flower : Item
     private StoryManager _storyManager; 
     
     // Start is called before the first frame update
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         _storyManager = FindObjectOfType<StoryManager>();
     }
 
     // Update is called once per frame
-    private void Update()
+    protected override void Update()
     {
-        
+        base.Update();
     }
 
     public override bool Collect()

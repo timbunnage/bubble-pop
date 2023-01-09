@@ -8,22 +8,17 @@ public class Grass : Item
     private StoryManager _storyManager; 
     
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-
-        initParticleColors();
+        base.Start();
+        
         _storyManager = FindObjectOfType<StoryManager>();
-
     }
 
     // Update is called once per frame
-    private void Update()
+    protected override void Update()
     {
-        
-    }
-
-    private void LateUpdate() {
-        setParticleColors();
+        base.Update();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
