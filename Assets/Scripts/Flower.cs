@@ -19,6 +19,7 @@ public class Flower : Item
     public FlowerType flowerType;
     
     private StoryManager _storyManager; 
+    
     // Start is called before the first frame update
     private void Start()
     {
@@ -34,28 +35,8 @@ public class Flower : Item
     public override bool Collect()
     {
         if (!base.Collect()) return false;
-
-        switch (flowerType)
-        {
-            case FlowerType.Iris:
-                _storyManager.IncrementStory();
-                break;
-            case FlowerType.IrisMetal:
-                break;
-            case FlowerType.Tulip:
-                _storyManager.IncrementStory();
-                break;
-            case FlowerType.TulipMetal:
-                break;
-            case FlowerType.Violet:
-                _storyManager.IncrementStory();
-                break;
-            case FlowerType.VioletMetal:
-                break;
-            case FlowerType.Undefined:
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
+        
+        _storyManager.IncrementFlower(flowerType);
         
         return true;
     }

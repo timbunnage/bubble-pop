@@ -1,57 +1,82 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Bird : MonoBehaviour
 {
+    public float travelDistance = 300; // Units to travel
+    public float travelSpeed = 4; // Units per second
 
-    private bool goLeft;
+    [Serializable]
+    public enum TravelDirection
+    {
+        Left,
+        Right
+    }
+
+    public TravelDirection travelDirection = TravelDirection.Left;
+
+    public Sprite[] spriteList;
+
     private SpriteRenderer _spriteRenderer;
 
-    private Vector2 startPosition;
-    private Vector2 endPosition;
+    private float _travelledDistance = 0f;
+    
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        startPosition = transform.localPosition;
-        endPosition = new Vector2(startPosition.x -30, startPosition.y);
-        goLeft = true;
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
+        switch (travelDirection)
+        {
+            case TravelDirection.Left:
+                _spriteRenderer.sprite = spriteList[0];
+                break;
+            case TravelDirection.Right:
+                _spriteRenderer.sprite = spriteList[1];
+                break;
+        }
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (goLeft)
+        float travelStep;
+        
+        switch (travelDirection)
         {
-            if (transform.localPosition.x > endPosition.x)
-            {
-                transform.position = new Vector2(transform.position.x - 0.02f, transform.position.y);
-            }
-            else
-            {
-                goLeft = false;
-                _spriteRenderer.flipX = true;
-            }
-        }
-
-
-        if (!goLeft)
-            {
-                if (transform.localPosition.x < startPosition.x)
+            case TravelDirection.Left:
+                if (_travelledDistance >= travelDistance)
                 {
-                    transform.position = new Vector2(transform.position.x + 0.02f, transform.position.y);
+                    // Switch direction
+                    travelDirection = TravelDirection.Right;
+                    _travelledDistance = 0f;
+                    _spriteRenderer.sprite = spriteList[1];
+                    break;
                 }
-                else
+                
+                // Move left
+                travelStep = Time.deltaTime * travelSpeed;
+                transform.position -= new Vector3(travelStep, 0, 0);
+                _travelledDistance += travelStep;
+                break;
+            case TravelDirection.Right:
+                if (_travelledDistance >= travelDistance)
                 {
-                 goLeft = true;
-                 _spriteRenderer.flipX = false;
-
+                    // Switch direction
+                    travelDirection = TravelDirection.Left;
+                    _travelledDistance = 0f;
+                    _spriteRenderer.sprite = spriteList[0];
+                    break;
                 }
-
+                
+                // Move right
+                travelStep = Time.deltaTime * travelSpeed;
+                transform.position += new Vector3(travelStep, 0, 0);
+                _travelledDistance += travelStep;
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
         }
-
-
     }
 }
