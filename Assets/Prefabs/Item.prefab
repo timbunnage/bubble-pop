@@ -5025,7 +5025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15407b9696c61d3448c8ddf1a02e17d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CollectionSprites: []
+  collectionSprites: []
+  collectionAudio: []
 --- !u!199 &4073799212316165560
 ParticleSystemRenderer:
   serializedVersion: 6
