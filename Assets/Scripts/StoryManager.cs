@@ -14,17 +14,23 @@ public class StoryManager : MonoBehaviour
         public string[] paragraphList;
     }
     public ParagraphList[] dialogueList;
+    
+    public AudioClip[] AudioClips;
+    public int[] AudioClipQueues;
 
     public int grassDestroyed;
 
     public Dictionary<Flower.FlowerType, int> Inventory = new();
 
+
     private DialogueManager _dialogueManager;
+    private AudioSource _audioSource;
 
     // Start is called before the first frame update
     private void Start()
     {
         _dialogueManager = FindObjectOfType<DialogueManager>();
+        _audioSource = GetComponent<AudioSource>();
 
         // Initialise inventory
         foreach (var flowerType in Enum.GetValues(typeof(Flower.FlowerType)).Cast<Flower.FlowerType>())
@@ -45,6 +51,14 @@ public class StoryManager : MonoBehaviour
         if (dialogueList[storyProgress].paragraphList.Length > 0)
         {
             _dialogueManager.CallDialogue(dialogueList[storyProgress].paragraphList.ToList());
+        }
+
+        // Play music for story progress if applicable
+        for (var i = 0; i < AudioClipQueues.Length; i++)
+        {
+            if (AudioClipQueues[i] != storyProgress) continue;
+            _audioSource.clip = AudioClips[i];
+            _audioSource.Play();
         }
         
         storyProgress++;
