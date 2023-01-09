@@ -5,11 +5,15 @@ using UnityEngine;
 
 public class Grass : Item
 {
+    private StoryManager _storyManager; 
     
     // Start is called before the first frame update
     void Start()
     {
+
         initParticleColors();
+        _storyManager = FindObjectOfType<StoryManager>();
+
     }
 
     // Update is called once per frame
@@ -26,7 +30,7 @@ public class Grass : Item
     {
         if (Collect())
         {
-            StoryManager.GrassDestroyed++;
+            _storyManager.IncrementGrass();
         }
     }
 }

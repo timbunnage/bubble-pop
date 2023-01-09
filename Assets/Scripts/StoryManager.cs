@@ -1,19 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class StoryManager : MonoBehaviour
 {
-    public static int StoryProgress = 0;
-    public static readonly string[] DialogueList =
+    public int storyProgress;
+    public string[] dialogueList =
     {
         "Why hello there.\nWhat are you doing here.\nYou know this place is dangerous, right?",
         "Didn't I tell you to leave?\nYou are not welcome here.\nRun away, child."
     };
 
-    public static int GrassDestroyed = 0;
+    public int irisCollected;
+    public int irisMetalCollected ;
+    public int tulipCollected;
+    public int tulipMetalCollected;
+    public int violetCollected;
+    public int violetMetalCollected;
+    public int grassDestroyed;
     
     private DialogueManager _dialogueManager; 
     
@@ -29,15 +35,51 @@ public class StoryManager : MonoBehaviour
         
     }
 
-    public void IncrementStory()
+    private void IncrementStory()
     {
         print("Story progressed");
         
-        var currentDialogue = DialogueList[StoryProgress].Split("\n").ToList();
+        var currentDialogue = dialogueList[storyProgress].Split("\n").ToList();
 
         // begin current dialogue
         _dialogueManager.CallDialogue(currentDialogue);
         
-        StoryProgress++;
+        storyProgress++;
+    }
+
+    public void IncrementFlower(Flower.FlowerType flowerType)
+    {
+        switch (flowerType)
+        {
+            case Flower.FlowerType.Iris:
+                IncrementStory();
+                irisCollected++;
+                break;
+            case Flower.FlowerType.IrisMetal:
+                irisMetalCollected++;
+                break;
+            case Flower.FlowerType.Tulip:
+                IncrementStory();
+                tulipCollected++;
+                break;
+            case Flower.FlowerType.TulipMetal:
+                tulipMetalCollected++;
+                break;
+            case Flower.FlowerType.Violet:
+                violetCollected++;
+                IncrementStory();
+                break;
+            case Flower.FlowerType.VioletMetal:
+                violetMetalCollected++;
+                break;
+            case Flower.FlowerType.Undefined:
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+
+    public void IncrementGrass()
+    {
+        grassDestroyed++;
     }
 }
