@@ -8,13 +8,13 @@ public class Flower : Item
     [Serializable]
     public enum FlowerType
     {
-        Undefined,
         Iris,
         IrisMetal,
         Tulip,
         TulipMetal,
         Violet,
-        VioletMetal
+        VioletMetal,
+        TentKey
     }
     public FlowerType flowerType;
     

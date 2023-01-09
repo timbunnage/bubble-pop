@@ -15,22 +15,22 @@ public class StoryManager : MonoBehaviour
     }
     public ParagraphList[] dialogueList;
 
-    public int irisCollected;
-    public int irisMetalCollected ;
-    public int tulipCollected;
-    public int tulipMetalCollected;
-    public int violetCollected;
-    public int violetMetalCollected;
     public int grassDestroyed;
-    
-    private DialogueManager _dialogueManager; 
-    
+
+    public Dictionary<Flower.FlowerType, int> Inventory = new();
+
+    private DialogueManager _dialogueManager;
+
     // Start is called before the first frame update
     private void Start()
     {
         _dialogueManager = FindObjectOfType<DialogueManager>();
-        
-        print(dialogueList[0].ToString());
+
+        // Initialise inventory
+        foreach (var flowerType in Enum.GetValues(typeof(Flower.FlowerType)).Cast<Flower.FlowerType>())
+        {
+            Inventory.Add(flowerType, 0);
+        }
     }
 
     // Update is called once per frame
@@ -54,30 +54,20 @@ public class StoryManager : MonoBehaviour
 
     public void IncrementFlower(Flower.FlowerType flowerType)
     {
+        Inventory[flowerType]++;
+        
         switch (flowerType)
         {
             case Flower.FlowerType.Iris:
+            case Flower.FlowerType.Tulip:
+            case Flower.FlowerType.Violet:
                 IncrementStory();
-                irisCollected++;
                 break;
             case Flower.FlowerType.IrisMetal:
-                irisMetalCollected++;
-                break;
-            case Flower.FlowerType.Tulip:
-                IncrementStory();
-                tulipCollected++;
-                break;
             case Flower.FlowerType.TulipMetal:
-                tulipMetalCollected++;
-                break;
-            case Flower.FlowerType.Violet:
-                violetCollected++;
-                IncrementStory();
-                break;
             case Flower.FlowerType.VioletMetal:
-                violetMetalCollected++;
+            case Flower.FlowerType.TentKey:
                 break;
-            case Flower.FlowerType.Undefined:
             default:
                 throw new ArgumentOutOfRangeException();
         }

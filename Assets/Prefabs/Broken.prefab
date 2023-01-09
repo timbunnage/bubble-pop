@@ -63,14 +63,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -119203088086641406}
+      addedObject: {fileID: -5989346516737607692}
   m_SourcePrefab: {fileID: 100100000, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
 --- !u!1 &8774837935773142434 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
   m_PrefabInstance: {fileID: 8214575844775651050}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-119203088086641406
+--- !u!114 &-5989346516737607692
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,13 +86,14 @@ MonoBehaviour:
   - {fileID: 0}
   collectionAudio:
   - {fileID: 0}
-  recipe: 00000000000000000000000000000000000000000000000000000000
+  recipeInput: 0000000000000000000000000000000000000000000000000000000000000000
   firstDialogueList:
-  - 'Oh look, a tractor!
-
-    It seems to be broken.'
-  - We need to fix it.
+  - Oh, what's this?
+  - It seems to be broken.
+  - I gotta fix it!
   repeatDialogueList:
-  - fix it!
+  - I gotta fix this thing somehow!
   collectedDialogueList:
-  - It's getting darker...
+  - ... It's fixed!
+  alreadyCollectedDialogueList:
+  - I already fixed it.

@@ -11,7 +11,7 @@ public class Item : MonoBehaviour
     public AudioClip[] collectionAudio;
 
     private int _collectionStage;
-    private bool _collected;
+    protected bool Collected;
 
     private SpriteRenderer _spriteRenderer;
     private AudioSource _audioSource;
@@ -46,7 +46,7 @@ public class Item : MonoBehaviour
 
     public virtual bool Collect()
     {
-        if (_collectionStage >= collectionSprites.Length || _collected) return false;
+        if (_collectionStage >= collectionSprites.Length || Collected) return false;
 
         // Swap sprite
         _spriteRenderer.sprite = collectionSprites[_collectionStage];
@@ -66,7 +66,7 @@ public class Item : MonoBehaviour
 
         if (_collectionStage != collectionSprites.Length) return false;
         
-        _collected = true;
+        Collected = true;
         return true;
     }
 }

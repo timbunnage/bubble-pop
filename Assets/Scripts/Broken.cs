@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,22 +6,30 @@ using System.Linq;
 
 public class Broken : Item
 {
-    public int[] recipe = {0,0,0,0,0,0,0};
+    public int[] recipeInput = {0, 0, 0, 0, 0, 0, 0, 0};
+    
+    private Dictionary<Flower.FlowerType, int> _recipe = new();
 
     public string[] firstDialogueList =
     {
-        "Oh look, a tractor!\nIt seems to be broken.",
-        "We need to fix it."
+        "Oh, what's this?",
+        "It seems to be broken.",
+        "I gotta fix it!"
     };
 
     public string[] repeatDialogueList =
     {
-        "fix it!"
+        "I gotta fix this thing somehow!"
     };
 
     public string[] collectedDialogueList =
     {
-        "It's getting darker..."
+        "... It's fixed!"
+    };
+    
+    public string[] alreadyCollectedDialogueList =
+    {
+        "I already fixed it."
     };
 
     private bool _investigated;
@@ -29,6 +38,14 @@ public class Broken : Item
     protected override void Start()
     {
         base.Start();
+
+        _recipe.Add(Flower.FlowerType.Iris, recipeInput[0]);
+        _recipe.Add(Flower.FlowerType.IrisMetal, recipeInput[1]);
+        _recipe.Add(Flower.FlowerType.Tulip, recipeInput[2]);
+        _recipe.Add(Flower.FlowerType.TulipMetal, recipeInput[3]);
+        _recipe.Add(Flower.FlowerType.Violet, recipeInput[4]);
+        _recipe.Add(Flower.FlowerType.VioletMetal, recipeInput[5]);
+        _recipe.Add(Flower.FlowerType.TentKey, recipeInput[6]);
     }
 
     // Update is called once per frame
@@ -38,10 +55,23 @@ public class Broken : Item
     }
 
     public override bool Collect() {
-        if (ReceipeCompleted())
+        if (Collected) // Already collected
+        {
+            DialogueManager.CallDialogue(alreadyCollectedDialogueList.ToList());
+            return base.Collect();
+        }
+        
+        if (Enum.GetValues(typeof(Flower.FlowerType)).Cast<Flower.FlowerType>().All(
+                flowerType => StoryManager.Inventory[flowerType] >= _recipe[flowerType])) // Recipe satisfied, first collection
         {
             DialogueManager.CallDialogue(collectedDialogueList.ToList());
-        
+            
+            // Subtract resources
+            foreach (var flowerType in Enum.GetValues(typeof(Flower.FlowerType)).Cast<Flower.FlowerType>())
+            {
+                StoryManager.Inventory[flowerType] -= _recipe[flowerType];
+            }
+
             return base.Collect();
         }
         
@@ -54,16 +84,5 @@ public class Broken : Item
 
         DialogueManager.CallDialogue(repeatDialogueList.ToList());
         return false;
-    }
-
-    // Check if the recipe has been completed
-    private bool ReceipeCompleted()
-    {
-        return StoryManager.irisCollected         >= recipe[1] &&
-               StoryManager.irisMetalCollected    >= recipe[2] &&
-               StoryManager.tulipCollected        >= recipe[3] &&
-               StoryManager.tulipMetalCollected   >= recipe[4] &&
-               StoryManager.violetCollected       >= recipe[5] &&
-               StoryManager.violetMetalCollected  >= recipe[6];
     }
 }

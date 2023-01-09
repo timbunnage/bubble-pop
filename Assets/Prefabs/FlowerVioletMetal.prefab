@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3361174062814755937, guid: 7d0d1bd3795f7254182eac9330772511, type: 3}
       propertyPath: flowerType
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -3361174062814755937, guid: 7d0d1bd3795f7254182eac9330772511, type: 3}
       propertyPath: collectionSprites.Array.data[0]
