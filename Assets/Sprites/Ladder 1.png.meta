@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c1593f1c17529644eb3bc84300519f18
+guid: 8ace8d0ec6a024f41b26d75430df9939
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileCliffWall_0
+      name: Ladder 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 16
+        height: 32
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,8 +133,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f02e3418ecbc684b898cc641c9b9aa3
-      internalID: 567227728
+      spriteID: 9c93b16c7b72fac47a9eb8bf38661ac4
+      internalID: -1797590374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ladder 1_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd23e8330f0d0d04cb15e72d28206337
+      internalID: 930596599
       vertices: []
       indices: 
       edges: []
@@ -150,7 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileCliffWall_0: 567227728
+      Ladder 1_1: 930596599
+      Ladder 1_0: -1797590374
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

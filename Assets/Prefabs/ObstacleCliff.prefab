@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: collectionSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 1082847226, guid: af9bf485d770c0f4786a1462d83a658f, type: 3}
+      objectReference: {fileID: -1850608081, guid: 4d5f4c18bbbc01c4da68a28b44f2ee34, type: 3}
     - target: {fileID: 705383098849183843, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Name
       value: ObstacleCliff
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 567227728, guid: c1593f1c17529644eb3bc84300519f18, type: 3}
+      objectReference: {fileID: 1442750588, guid: 4d5f4c18bbbc01c4da68a28b44f2ee34, type: 3}
     - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -93,8 +93,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

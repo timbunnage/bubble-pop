@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 324c625b37b3a254b811894a0e7e42ef
+guid: fcfef79862d4b5e4c942972085b1e6ea
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileCliffTop_0
+      name: Grave 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 16
+        width: 32
+        height: 32
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,8 +133,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15eefa02c264aca4d8dc75bcd2ec5d12
-      internalID: -754416611
+      spriteID: abdfbe3ee22f5ba449ba30d91acbde84
+      internalID: 1184442489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Grave 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d22516f5d85d6ac4783477c246991a27
+      internalID: -1923110477
       vertices: []
       indices: 
       edges: []
@@ -150,7 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileCliffTop_0: -754416611
+      Grave 1_0: 1184442489
+      Grave 1_1: -1923110477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,9 +8,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionAudio.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: -1337741815, guid: 03bf095ded3330e489a55e8d28b7a18f, type: 3}
     - target: {fileID: 705383098849183843, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Name
-      value: Obstacle
+      value: ObstacleSewer
       objectReference: {fileID: 0}
     - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_RootOrder
@@ -55,6 +63,34 @@ PrefabInstance:
     - target: {fileID: 705383098849183844, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1847846800, guid: 03bf095ded3330e489a55e8d28b7a18f, type: 3}
+    - target: {fileID: 705383098849183845, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3684102583535785823, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

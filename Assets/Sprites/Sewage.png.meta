@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5357bdeaa2d4cd5428163fa1728e0be4
+guid: 03bf095ded3330e489a55e8d28b7a18f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,12 +119,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ladder_0
+      name: Sewage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
+        width: 64
         height: 32
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -133,19 +133,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9ec272d06dfad5b4b8d1397545ab0c88
-      internalID: 638558440
+      spriteID: 729c889eee45775489ecc53c50a32d94
+      internalID: -1847846800
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ladder_1
+      name: Sewage_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 64
         y: 0
-        width: 16
+        width: 64
         height: 32
       alignment: 6
       pivot: {x: 0, y: 0}
@@ -154,8 +154,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b68069a38d120b488030aa7110826dd
-      internalID: -1759219585
+      spriteID: da65cb69a862c5a4abb359518ad34dcd
+      internalID: -1204720111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c80da3281e0b4be4eba2b1abd003a7db
+      internalID: -1899245258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sewage_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45df21dcebcec1543a08323445ebf3b5
+      internalID: -1337741815
       vertices: []
       indices: 
       edges: []
@@ -171,8 +213,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Ladder_0: 638558440
-      Ladder_1: -1759219585
+      Sewage_0: -1847846800
+      Sewage_3: -1337741815
+      Sewage_1: -1204720111
+      Sewage_2: -1899245258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

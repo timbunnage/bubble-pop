@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10baf87137e4f33478eb9f0a9c2d684b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectionSprites: []
+  collectionSprites:
+  - {fileID: 0}
   collectionAudio: []
-  collectable: 0
   clearDialogueList:
   - I can get through now!

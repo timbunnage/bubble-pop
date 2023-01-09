@@ -24,9 +24,33 @@ PrefabInstance:
       propertyPath: collectionAudio.Array.data[0]
       value: 
       objectReference: {fileID: 8300000, guid: 39312227081ec1d4db90b3e1b2b85a26, type: 3}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4840513542273028766, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142434, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_Name
       value: BrokenSewer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774837935773142436, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_Size.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774837935773142436, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_RootOrder

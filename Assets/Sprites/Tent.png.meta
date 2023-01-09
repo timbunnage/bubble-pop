@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4077ef7039baeb344b672affd1721c43
+guid: a6a080a2d861c7d4b9afb07896fc921f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grave_0
+      name: Tent_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 48
+        height: 48
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,8 +133,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67bde0ef2d0758046a421f77a4fd290a
-      internalID: -2124209000
+      spriteID: 9c0a62d02b910554096613c2d5a8160c
+      internalID: -1754388462
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grave_0: -2124209000
+      Tent_0: -1754388462
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

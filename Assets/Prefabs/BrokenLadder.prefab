@@ -59,7 +59,7 @@ PrefabInstance:
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: collectionSprites.Array.data[0]
       value: 
-      objectReference: {fileID: 638558440, guid: 5357bdeaa2d4cd5428163fa1728e0be4, type: 3}
+      objectReference: {fileID: -1797590374, guid: 8ace8d0ec6a024f41b26d75430df9939, type: 3}
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: firstDialogueList.Array.data[0]
       value: Oh, a ladder
@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: 8774837935773142436, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1759219585, guid: 5357bdeaa2d4cd5428163fa1728e0be4, type: 3}
+      objectReference: {fileID: 930596599, guid: 8ace8d0ec6a024f41b26d75430df9939, type: 3}
     - target: {fileID: 8774837935773142436, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
