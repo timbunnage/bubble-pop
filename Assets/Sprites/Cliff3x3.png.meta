@@ -124,17 +124,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
+        width: 528
         height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43939394, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2978f093dbdd27c468aa049a5fae9048
-      internalID: 1442750588
+      spriteID: a1f3a4ddeeed37e4da85c1b6eb72950c
+      internalID: -1072785261
       vertices: []
       indices: 
       edges: []
@@ -143,19 +143,19 @@ TextureImporter:
       name: Cliff3x3_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 528
         y: 0
-        width: 48
+        width: 528
         height: 48
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.43939394, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cab737e80ad65b94d9f926c329326e0a
-      internalID: -1850608081
+      spriteID: 369c5538f3b94dc4f91d8d14bf3c7402
+      internalID: 1527948384
       vertices: []
       indices: 
       edges: []
@@ -171,8 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Cliff3x3_1: -1850608081
-      Cliff3x3_0: 1442750588
+      Cliff3x3_1: 1527948384
+      Cliff3x3_0: -1072785261
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
