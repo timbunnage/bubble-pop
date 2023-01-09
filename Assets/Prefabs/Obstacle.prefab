@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Obstacle
       objectReference: {fileID: 0}
+    - target: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 848494951791209295, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -56,18 +60,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3543484491282363508, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
-      propertyPath: m_IncludeLayers.m_Bits
-      value: 0
+    - target: {fileID: 4446049802586940819, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8895428552543708121, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 5010074997088148782}
     - targetCorrespondingSourceObject: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
       insertIndex: -1
       addedObject: {fileID: -7261035520132227370}
@@ -77,33 +78,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 848494951791209288, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
   m_PrefabInstance: {fileID: 147619989539676971}
   m_PrefabAsset: {fileID: 0}
---- !u!50 &5010074997088148782
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 705383098849183843}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!114 &-7261035520132227370
 MonoBehaviour:
   m_ObjectHideFlags: 0

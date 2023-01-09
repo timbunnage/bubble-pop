@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,8 +12,8 @@ public class Player : MonoBehaviour
     public Sprite rightSprite;
     public Sprite backSprite;
     public Sprite leftSprite;
-
-    public ContactFilter2D movementFilter;
+    
+    public ContactFilter2D contactFilter;
 
     private DialogueManager _dialogueManager; 
     
@@ -21,7 +22,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D _rigidbody;
     
     private Vector2 _movementVector;
-    
+
     private readonly List<RaycastHit2D> _castCollisions = new();
 
     // Start is called before the first frame update
@@ -39,7 +40,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        //transform.position += moveSpeed * Time.deltaTime * new Vector3(_movementVector.x, _movementVector.y, 0);
+        
     }
 
     private void FixedUpdate()
@@ -48,18 +49,13 @@ public class Player : MonoBehaviour
         
         var count = _rigidbody.Cast(
             _movementVector.normalized,
-            movementFilter,
+            contactFilter,
             _castCollisions,
             moveSpeed * Time.fixedDeltaTime
         );
         
         if (count > 0)
         {
-            foreach (var hit in _castCollisions)
-            {
-                print(hit.ToString());
-            }
-
             return;
         }
         

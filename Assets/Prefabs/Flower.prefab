@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4446049802586940819, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -8895428552543708121, guid: 81cb04838bbc4424ab6ba75e2016f295, type: 3}
     m_RemovedGameObjects: []
