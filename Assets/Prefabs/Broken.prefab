@@ -90,7 +90,7 @@ MonoBehaviour:
   - {fileID: 0}
   collectionAudio:
   - {fileID: 0}
-  recipeInput: 0000000000000000000000000000000000000000000000000000000000000000
+  recipeInput: 00000000000000000000000000000000000000000000000000000000
   linkedObstacle: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
   firstDialogueList:
   - Oh, what's this?

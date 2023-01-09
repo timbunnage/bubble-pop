@@ -13,9 +13,7 @@ public class Player : MonoBehaviour
     public Sprite backSprite;
     public Sprite leftSprite;
     
-    public ContactFilter2D contactFilter;
-
-    private DialogueManager _dialogueManager; 
+    private DialogueManager _dialogueManager;
     
     private SpriteRenderer _spriteRenderer;
     private Collider2D _collider;
@@ -49,14 +47,19 @@ public class Player : MonoBehaviour
         
         var count = _rigidbody.Cast(
             _movementVector.normalized,
-            contactFilter,
             _castCollisions,
             moveSpeed * Time.fixedDeltaTime
         );
         
         if (count > 0)
         {
-            return;
+            foreach (var hit in _castCollisions)
+            {
+                var obstacle = hit.collider.gameObject.GetComponent<Obstacle>();
+                if (obstacle == null) continue;
+                print(obstacle.Collectable);
+                if (!obstacle.Collectable) return;
+            }
         }
         
         _rigidbody.MovePosition(_rigidbody.position + moveSpeed * Time.fixedDeltaTime * _movementVector);
@@ -65,6 +68,11 @@ public class Player : MonoBehaviour
     private void OnMove(InputValue inputValue)
     {
         _movementVector = inputValue.Get<Vector2>().normalized;
+        
+        if (_movementVector.magnitude == 0)
+        {
+            return;
+        }
 
         // Get movement direction
         var angle = Vector2.SignedAngle(_movementVector, Vector2.up);

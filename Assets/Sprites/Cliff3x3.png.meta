@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4077ef7039baeb344b672affd1721c43
+guid: 4d5f4c18bbbc01c4da68a28b44f2ee34
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -21,7 +21,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 1
+  isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -119,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grave_0
+      name: Cliff3x3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 48
+        height: 48
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,8 +133,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67bde0ef2d0758046a421f77a4fd290a
-      internalID: -2124209000
+      spriteID: 2978f093dbdd27c468aa049a5fae9048
+      internalID: 1442750588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cliff3x3_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab737e80ad65b94d9f926c329326e0a
+      internalID: -1850608081
       vertices: []
       indices: 
       edges: []
@@ -150,7 +171,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grave_0: -2124209000
+      Cliff3x3_1: -1850608081
+      Cliff3x3_0: 1442750588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

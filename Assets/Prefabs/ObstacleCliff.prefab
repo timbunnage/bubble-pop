@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionAudio.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 1082847226, guid: af9bf485d770c0f4786a1462d83a658f, type: 3}
     - target: {fileID: 705383098849183843, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: m_Name
       value: ObstacleCliff

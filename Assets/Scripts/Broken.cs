@@ -74,7 +74,7 @@ public class Broken : Item
                 StoryManager.Inventory[flowerType] -= _recipe[flowerType];
             }
 
-            linkedObstacle.Collect();
+            linkedObstacle.Clear();
             
             return base.Collect();
         }

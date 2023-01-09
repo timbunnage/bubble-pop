@@ -92,3 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectionSprites: []
   collectionAudio: []
+  collectable: 0
+  clearDialogueList:
+  - I can get through now!
