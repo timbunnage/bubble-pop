@@ -211,14 +211,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2265418834200518771}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -322,6 +322,20 @@ MonoBehaviour:
   rightSprite: {fileID: -320724909, guid: 057182479ca6a8c479d96298b9d245c2, type: 3}
   backSprite: {fileID: -342975942, guid: 690da0523f5963843a52403a64068d18, type: 3}
   leftSprite: {fileID: 396734888, guid: 4d66b07d8e235264588a8217cf251444, type: 3}
+  movementFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 1
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
 --- !u!82 &955200090625396583
 AudioSource:
   m_ObjectHideFlags: 0

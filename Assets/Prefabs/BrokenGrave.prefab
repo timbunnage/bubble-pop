@@ -8,9 +8,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: linkedObstacle
+      value: 
+      objectReference: {fileID: 4042890987983671409, guid: 7dbed40bc4354a443a05aab044d132bf, type: 3}
     - target: {fileID: 8774837935773142434, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_Name
-      value: Broken
+      value: BrokenGrave
       objectReference: {fileID: 0}
     - target: {fileID: 8774837935773142437, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: m_RootOrder

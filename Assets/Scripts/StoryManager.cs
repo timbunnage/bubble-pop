@@ -41,8 +41,6 @@ public class StoryManager : MonoBehaviour
 
     private void IncrementStory()
     {
-        print("Story progressed");
-
         // begin current dialogue
         if (dialogueList[storyProgress].paragraphList.Length > 0)
         {

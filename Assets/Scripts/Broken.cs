@@ -7,6 +7,8 @@ using System.Linq;
 public class Broken : Item
 {
     public int[] recipeInput = {0, 0, 0, 0, 0, 0, 0, 0};
+
+    public Obstacle linkedObstacle;
     
     private Dictionary<Flower.FlowerType, int> _recipe = new();
 
@@ -72,6 +74,8 @@ public class Broken : Item
                 StoryManager.Inventory[flowerType] -= _recipe[flowerType];
             }
 
+            linkedObstacle.Collect();
+            
             return base.Collect();
         }
         

@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
+      propertyPath: linkedObstacle
+      value: 
+      objectReference: {fileID: 4042890987983671409, guid: b6948394d5e55da4598fbad585acc9e9, type: 3}
+    - target: {fileID: -5989346516737607692, guid: 059187219a37a4d44b9f42ba4395ad91, type: 3}
       propertyPath: recipeInput.Array.data[1]
       value: 1
       objectReference: {fileID: 0}

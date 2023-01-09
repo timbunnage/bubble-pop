@@ -12,12 +12,17 @@ public class Player : MonoBehaviour
     public Sprite backSprite;
     public Sprite leftSprite;
 
+    public ContactFilter2D movementFilter;
+
     private DialogueManager _dialogueManager; 
     
     private SpriteRenderer _spriteRenderer;
     private Collider2D _collider;
+    private Rigidbody2D _rigidbody;
     
     private Vector2 _movementVector;
+    
+    private readonly List<RaycastHit2D> _castCollisions = new();
 
     // Start is called before the first frame update
     private void Start()
@@ -26,6 +31,7 @@ public class Player : MonoBehaviour
         
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
         _collider = gameObject.GetComponent<Collider2D>();
+        _rigidbody = gameObject.GetComponent<Rigidbody2D>();
         
         Cursor.visible = false;
     }
@@ -33,24 +39,39 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        transform.position += moveSpeed * Time.deltaTime * new Vector3(_movementVector.x, _movementVector.y, 0);
+        //transform.position += moveSpeed * Time.deltaTime * new Vector3(_movementVector.x, _movementVector.y, 0);
+    }
+
+    private void FixedUpdate()
+    {
+        if (_dialogueManager.active) return;
+        
+        var count = _rigidbody.Cast(
+            _movementVector.normalized,
+            movementFilter,
+            _castCollisions,
+            moveSpeed * Time.fixedDeltaTime
+        );
+        
+        if (count > 0)
+        {
+            foreach (var hit in _castCollisions)
+            {
+                print(hit.ToString());
+            }
+
+            return;
+        }
+        
+        _rigidbody.MovePosition(_rigidbody.position + moveSpeed * Time.fixedDeltaTime * _movementVector);
     }
 
     private void OnMove(InputValue inputValue)
     {
-        if (_dialogueManager.active)
-        {
-            _movementVector = new Vector2(0, 0);
-            return;
-        }
-        
         _movementVector = inputValue.Get<Vector2>().normalized;
 
-        if (!(_movementVector.magnitude > 0)) return;
-        
         // Get movement direction
         var angle = Vector2.SignedAngle(_movementVector, Vector2.up);
-
         switch (angle)
         {
             // Change sprites based on movement direction

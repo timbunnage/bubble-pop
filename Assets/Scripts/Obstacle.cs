@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Grass : Item
+public class Obstacle : Item
 {
     // Start is called before the first frame update
     protected override void Start()
@@ -17,13 +16,8 @@ public class Grass : Item
         base.Update();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public override bool Collect()
     {
-        if (other.gameObject.name != "Player") return;
-        
-        if (Collect())
-        {
-            StoryManager.IncrementGrass();
-        }
+        return base.Collect();
     }
 }
