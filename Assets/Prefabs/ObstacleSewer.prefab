@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: collectionAudio.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: collectionSprites.Array.data[0]

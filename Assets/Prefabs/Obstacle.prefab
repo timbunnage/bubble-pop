@@ -96,6 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectionSprites:
   - {fileID: 0}
-  collectionAudio: []
-  clearDialogueList:
-  - I can get through now!
+  collectionAudio:
+  - {fileID: 0}
+  solid: 0

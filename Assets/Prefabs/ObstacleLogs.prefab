@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
+      propertyPath: collectionAudio.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7261035520132227370, guid: 881f876b23499bb41be66202cf816317, type: 3}
       propertyPath: collectionSprites.Array.data[0]
       value: 
       objectReference: {fileID: 1894410449, guid: 7a66855030ecc2e4eb38cdb0da947751, type: 3}

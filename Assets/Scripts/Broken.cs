@@ -89,25 +89,25 @@ public class Broken : Item
             switch (i)
             {
                 case 0:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Iris] - recipeInput[i]) + " Iris";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.Iris]) + " Iris";
                     break;
                 case 1:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.IrisMetal] - recipeInput[i]) + " Aluminium";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.IrisMetal]) + " Aluminium";
                     break;
                 case 2:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Tulip] - recipeInput[i]) + " Tulip";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.Tulip]) + " Tulip";
                     break;
                 case 3:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.TulipMetal] - recipeInput[i]) + " Copper";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.TulipMetal]) + " Copper";
                     break;
                 case 4:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.Violet] - recipeInput[i]) + " Violet";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.Violet]) + " Violet";
                     break;
                 case 5:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.VioletMetal] - recipeInput[i]) + " Steel";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.VioletMetal]) + " Steel";
                     break;
                 case 6:
-                    recipePrompt += " " + (StoryManager.Inventory[Flower.FlowerType.TentKey] - recipeInput[i]) + " tent key";
+                    recipePrompt += " " + (recipeInput[i] - StoryManager.Inventory[Flower.FlowerType.TentKey]) + " tent key";
                     break;
             }
         }
